@@ -393,7 +393,7 @@ class _ChatScreenState extends State<ChatScreen> {
             Icon(
               Icons.chat_bubble_outline,
               size: 80,
-              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
+              color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
             ),
             const SizedBox(height: 24),
             Text(
@@ -499,7 +499,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 BoxShadow(
                   offset: const Offset(0, -2),
                   blurRadius: 4,
-                  color: Colors.black.withValues(alpha: 0.1),
+                  color: Colors.black.withOpacity(0.1),
                 ),
               ],
             ),

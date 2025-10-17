@@ -61,11 +61,11 @@ class MessageBubble extends StatelessWidget {
                         _formatTimestamp(message.timestamp),
                         style: TextStyle(
                           color: isUser
-                              ? Colors.white.withValues(alpha: 0.7)
+                              ? Colors.white.withOpacity(0.7)
                               : Theme.of(context)
                                   .colorScheme
                                   .onSurfaceVariant
-                                  .withValues(alpha: 0.6),
+                                  .withOpacity(0.6),
                           fontSize: 11,
                         ),
                       ),

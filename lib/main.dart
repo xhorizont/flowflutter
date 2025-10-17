@@ -187,7 +187,7 @@ class FlowFlutterApp extends StatelessWidget {
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return primaryBlue.withValues(alpha: 0.5);
+            return primaryBlue.withOpacity(0.5);
           }
           return const Color(0xFF374151);
         }),
