@@ -35,7 +35,6 @@ class FlowFlutterApp extends StatelessWidget {
         secondary: accentCyan,
         surface: cardDark,
         surfaceContainerHighest: cardDark,
-        background: darkNavy,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
         onSurface: Colors.white,
@@ -53,15 +52,6 @@ class FlowFlutterApp extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w300,
           fontFamily: 'Roboto',
-        ),
-      ),
-
-      // Card theme
-      cardTheme: CardThemeData(
-        color: cardDark,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
         ),
       ),
 
@@ -187,7 +177,7 @@ class FlowFlutterApp extends StatelessWidget {
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
-            return primaryBlue.withOpacity(0.5);
+            return primaryBlue.withAlpha(128);
           }
           return const Color(0xFF374151);
         }),
