@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Build outputs
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Platform-specific
+android/
+ios/
+linux/
+macos/
+windows/
+
+# CI/CD
+.github/
+
+# Project-specific
+.claude/

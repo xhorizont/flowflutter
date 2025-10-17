@@ -181,6 +181,51 @@ flutter build web --release
 flutter build windows --release  # or macos, linux
 ```
 
+### Docker Deployment
+
+FlowFlutter can be deployed as a web application using Docker:
+
+#### Using Pre-built Image
+
+```bash
+# Pull from GitHub Container Registry
+docker pull ghcr.io/xhorizont/flowflutter:latest
+
+# Run the container
+docker run -d \
+  --name flowflutter \
+  -p 8080:80 \
+  ghcr.io/xhorizont/flowflutter:latest
+
+# Access at http://localhost:8080
+```
+
+#### Building Locally
+
+```bash
+# Build the image
+docker build -t flowflutter:local .
+
+# Run the container
+docker run -d \
+  --name flowflutter \
+  -p 8080:80 \
+  flowflutter:local
+```
+
+#### Available Tags
+
+- `latest` - Latest stable release
+- `1.0.x` - Specific version
+- `1.0` - Latest 1.0.x version
+- `1` - Latest 1.x.x version
+
+The Docker image:
+- Multi-stage build for optimal size (~50MB)
+- Nginx serving Flutter web build
+- Health check included
+- Multi-architecture support (linux/amd64, linux/arm64)
+
 ### Hot Reload
 
 While developing:
